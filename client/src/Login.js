@@ -42,7 +42,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className='signup'>
+    <div className='signup' style={{ backgroundImage: 'url("img1.avif")' }}>
     <div className="container">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>

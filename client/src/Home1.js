@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="home-container">
+            <div className="home-container" style={{ backgroundImage: 'url("img1.avif")' }}>
                 <header className="header">
                     <div className="logo">
                         <img src="logo.jpg" alt="Logo" />
@@ -51,7 +51,7 @@ const Home = () => {
             </div>
             <Link to="/chatbot" className="chatbot-button">
             💬
-        </Link>
+            </Link>
             <Footer />
 
             {/* Chatbot component */}

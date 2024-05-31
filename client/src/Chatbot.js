@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
+import Footer from './Footer';
 
 const theme = {
     background: '#f5f8fb',
@@ -125,31 +126,31 @@ const steps = [
 
 const Chatbot = () => {
     return (
-        <div className='chatbot'>
-            <div className='header'>
+        <div className='chatbot' style={{ backgroundImage: 'url("img.jpg")' }}>
+            <header className='header'>
                 <div className="logo">
-                        <img src="logo.jpg" alt="Logo" />
-                    </div>
-                    <nav>
-                        <ul className="nav-links">
-                            <li><Link to="/" >Home</Link></li>
-                            <li><Link to="/signup" >Houses</Link></li>
-                            <li><Link to="/signup" >Booking</Link></li>
-                            <li><Link to="/" >About</Link></li>
-                            <li><Link to="/" >Contact</Link></li>
-                            <li ><Link to="/signup" style={{ 
-                                color: 'white', textAlign:'center', backgroundColor:'blue',padding:'5px',
-                                borderRadius:'3px', margin:'10px'
-                            }} >Login/Signup</Link></li>
-                        </ul>
-                    </nav>
+                    <img src="logo.jpg" alt="Logo" />
+                </div>
+                <nav>
+                    <ul className="nav-links">
+                        <li><Link to="/" >Home</Link></li>
+                        <li><Link to="/houses" >Houses</Link></li>
+                        <li><Link to="/booking" >Booking</Link></li>
+                        <li><Link to="/about" >About</Link></li>
+                        <li><Link to="/contact" >Contact</Link></li>
+                        <li><Link to="/signup" className="login-signup-link" 
+                        style={{backgroundColor:'blue', borderRadius:'5px',padding:'5px'}}>Login/Signup</Link></li>
+                    </ul>
+                </nav>
+            </header>
+            <div className='smallchatbot'>
+                <ThemeProvider theme={theme}>
+                    <ChatBot steps={steps} />
+                </ThemeProvider>
             </div>
-            <ThemeProvider theme={theme}>
-                <ChatBot steps={steps} />
-            </ThemeProvider>
+            <Footer />
         </div>
     );
 };
-
 
 export default Chatbot;

@@ -4,7 +4,7 @@ const AboutUs = () => {
     return (
         <div className="about-us">
             <h1>WELCOME TO OUR HOUSE RENT COMPANY</h1>
-            <div className="circle-image"></div>
+            <div className="circle-image" style={{ backgroundImage: 'url("i1.jpg")' }}></div>
             
             <h2>About Company</h2>
             <p>

@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('C:\Users\paviv\OneDrive\Documents\Projects\House_Rental_App\client\public\img1.avif'); 
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -79,7 +78,6 @@ p a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('C:\Users\paviv\OneDrive\Documents\Projects\House_Rental_App\client\public\img1.avif'); 
   background-size: cover;
   background-position: center;
   min-height: 100vh; /* Ensure the background covers the entire viewport height */
@@ -566,4 +564,10 @@ textarea {
 .chatbot {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.smallchatbot{
+  background-color: rgb(245, 183, 206);
+  margin-left: 400px;
+  padding: 50px;
+  width: 350px;
 }

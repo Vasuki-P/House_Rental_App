@@ -30,7 +30,7 @@ const Signup = () => {
   };
 
   return (
-    <div className='signup'>
+    <div className='signup' style={{ backgroundImage: 'url("img1.avif")' }}>
       <div className="container">
         <h1>Signup</h1>
         <form>
