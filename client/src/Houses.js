@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHeart, FaShare, FaMapMarkerAlt } from 'react-icons/fa';
-
 const housesData = [
     { id: 1, imgSrc: 'image1.jpg', name: 'Sunset Villa', location: 'California', type: '3BHK', price: '$2500/month' },
     { id: 2, imgSrc: 'image3.jpg', name: 'Ocean View', location: 'Florida', type: '2BHK', price: '$1800/month' },
@@ -14,23 +13,17 @@ const housesData = [
     { id: 8, imgSrc: 'image8.jpg', name: 'Riverside Bungalow', location: 'Washington', type: '4BHK', price: '$2800/month' },
     { id: 9, imgSrc: 'image9.jpg', name: 'Suburban Home', location: 'Illinois', type: '3BHK', price: '$2000/month' },
 ];
-
-
 const Houses = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const housesPerPage = 3;
-
     const indexOfLastHouse = currentPage * housesPerPage;
     const indexOfFirstHouse = indexOfLastHouse - housesPerPage;
     const currentHouses = housesData.slice(indexOfFirstHouse, indexOfLastHouse);
-
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(housesData.length / housesPerPage); i++) {
         pageNumbers.push(i);
     }
-
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
     return (
         <div className="houses-container">
             <h1 className="houses-heading">Houses</h1>
@@ -65,5 +58,4 @@ const Houses = () => {
         </div>
     );
 };
-
 export default Houses;
